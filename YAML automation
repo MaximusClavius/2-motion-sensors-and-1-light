@@ -1,0 +1,58 @@
+alias: Motion in korridor
+description: ""
+trigger:
+  - type: motion
+    platform: device
+    device_id: 500b2e5415d29c9d17b4033a547d5bb4
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
+    domain: binary_sensor
+    id: motion-korridor-on
+  - type: motion
+    platform: device
+    device_id: 61db5bf4741cdae705f79e7d2fdb31bd
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
+    domain: binary_sensor
+    id: motion-korridor-on
+  - type: no_motion
+    platform: device
+    device_id: 500b2e5415d29c9d17b4033a547d5bb4
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
+    domain: binary_sensor
+    id: motion-korridor-off
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  - type: no_motion
+    platform: device
+    device_id: 61db5bf4741cdae705f79e7d2fdb31bd
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+    id: motion-korridor-off
+condition:
+  - condition: template
+    value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: motion-korridor-on
+        sequence:
+          - type: turn_on
+            device_id: b65e04bd25f0b811ef4b9a4b5bf3a314
+            entity_id: light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light
+            domain: light
+            brightness_pct: 50
+      - conditions:
+          - condition: trigger
+            id: motion-korridor-off
+        sequence:
+          - type: turn_off
+            device_id: b65e04bd25f0b811ef4b9a4b5bf3a314
+            entity_id: light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light
+            domain: light
+mode: single
