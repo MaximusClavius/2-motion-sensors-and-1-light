@@ -4,4 +4,5 @@ Denne automation virker, når solen ikke længere er over horisonten, dvs når d
 <p>En af sensorerne registrer en bevægelse -> tænd lys<br>
 En af sensorerne registrer ingen bevægelse længere -> sluk lys efter 30 sekunder</p>
 
-![image](https://user-images.githubusercontent.com/103023823/197383164-c4e3c8cd-f970-4ad1-9af9-4d9d025e178f.png)
+Fejl! Hvis der er registreret bevægelse og solen er skiftet til over horisonten, så slukker lyset ikke..., da udløseren bevægelse er stoppet aldrig bliver udløst
+![image](https://user-images.githubusercontent.com/103023823/198010779-3e57695c-78e7-4ae9-bb46-679f28826589.png)
