@@ -19,21 +19,22 @@ trigger:
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
     domain: binary_sensor
     id: motion-korridor-off
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 30
   - type: no_motion
     platform: device
     device_id: 61db5bf4741cdae705f79e7d2fdb31bd
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
     domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 30
     id: motion-korridor-off
 condition:
+  - condition: and
+    conditions:
+      - condition: device
+        type: is_on
+        device_id: b65e04bd25f0b811ef4b9a4b5bf3a314
+        entity_id: light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light
+        domain: light
+      - condition: template
+        value_template: "{{ states.sun.sun.state == 'above_horizon' }}"
   - condition: template
     value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
 action:
