@@ -8,5 +8,7 @@ Fejl! Hvis der er registreret bevægelse og solen er skiftet til over horisonten
 Så de nye betingelser er:
 1) Sol er over horisonten og lyset er tændt
 2) Sol er under horisonten
+PS
+Bevægelses-sensorerne kan manuel sættes til 30% eller 100% lysstyrke. Hvis bare man kunne få fat i den, fx via blueprint, så kunne der også blive lys i et "mørkt" tordenvejr
 
 ![image](https://user-images.githubusercontent.com/103023823/198010779-3e57695c-78e7-4ae9-bb46-679f28826589.png)
