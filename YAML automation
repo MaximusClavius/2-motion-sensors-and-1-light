@@ -22,7 +22,7 @@ trigger:
     for:
       hours: 0
       minutes: 0
-      seconds: 30
+      seconds: 0
   - type: no_motion
     platform: device
     device_id: 61db5bf4741cdae705f79e7d2fdb31bd
@@ -32,7 +32,7 @@ trigger:
     for:
       hours: 0
       minutes: 0
-      seconds: 30
+      seconds: 0
 condition:
   - condition: and
     conditions:
@@ -43,6 +43,7 @@ condition:
         domain: light
       - condition: template
         value_template: "{{ states.sun.sun.state == 'above_horizon' }}"
+    enabled: false
   - condition: template
     value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
 action:
