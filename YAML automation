@@ -19,12 +19,20 @@ trigger:
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
     domain: binary_sensor
     id: motion-korridor-off
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
   - type: no_motion
     platform: device
     device_id: 61db5bf4741cdae705f79e7d2fdb31bd
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
     domain: binary_sensor
     id: motion-korridor-off
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
 condition:
   - condition: and
     conditions:
