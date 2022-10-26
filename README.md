@@ -9,4 +9,5 @@ Så de nye betingelser er:
 1) Sol er over horisonten og lyset er tændt
 2) Sol er under horisonten
 <p>Visning i brugergrænseflade</p>
-![image](https://user-images.githubusercontent.com/103023823/198010779-3e57695c-78e7-4ae9-bb46-679f28826589.png)
+
+![image](https://user-images.githubusercontent.com/103023823/198015505-5aa6042f-2111-4588-bcf5-755066c2a495.png)
