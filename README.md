@@ -8,10 +8,10 @@ En af sensorerne registrer en bevægelse -> tænd lys<br>
 En af sensorerne registrer ingen bevægelse længere -> sluk lys efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)</p>
 <p><b>Betingelser:</b><br>
 Sol er over horisonten og lyset er tændt<br>
-<b>eller</b><br>
+<i>eller</i><br>
 Sol er under horisonten</p>
 <p><b>Handlinger:</b><br>
-Choose:<br>
+<i>Choose:</i><br>
 ligth-on: tænd lys<br>
 ligth-off: sluk lys
 </p>
@@ -28,10 +28,10 @@ Når jeg ved der er 3 minutter colddown før en motion-off, så kunne man ersatt
 En af sensorerne registrer en bevægelse -> tænd lys<br>
 <p><b>Betingelser:</b><br>
 Sol er over horisonten og lyset er tændt<br>
-<b>eller</b><br>
+<i>eller</i><br>
 Sol er under horisonten</p>
 <p><b>Handlinger:</b><br>
-Choose:<br>
+<i>Choose:</i><br>
 ligth-on: tænd lys og start eller genstart timer<br>
 ligth-off: sluk lys
 </p>
