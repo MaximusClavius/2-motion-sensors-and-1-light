@@ -19,13 +19,14 @@ Udklip af historikken fra området: Gang + sun.sun
 
 ![Skærmbillede 2022-11-01 075949](https://user-images.githubusercontent.com/103023823/199177495-ae3647a2-2cdc-4f7e-8b98-5840aae262b7.png)
 <del>Der er 2 problemer i denne konstruktion</del> Nej, der er 3 problemer i denne konstruktion:
-1. Sensor 2 tænder og slukker lyset, og ignorer sensor 1
+1. Sensor 2 tænder og slukker lyset, og ignorer sensor 1 (Trigger ID kan åbenbart ikke være ens for sensorer)
 2. Sensor 1 vil slukke lyset, men solen er over horisonten, og lyset bliver ikke slukket.
 3. Ingen udløser til at slukke lyset i dagslys. En IKEA sensor sender kun en motion-off, når der er konstateret en motion-on og det sker efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)
 <p><b>DER ER DØMT TÆNKEBOKS</b></p>
 Når jeg ved der er 3 minutter colddown før en motion-off, så kunne man ersatte motion-off med en timer, som slukker lyset efter 3-4 minutter.
 <p><b>Udløsere:</b><br>
 En af sensorerne registrer en bevægelse -> tænd lys<br>
+Timer udløber -> sluk lys<br>
 <p><b>Betingelser:</b><br>
 Sol er over horisonten og lyset er tændt<br>
 <i>eller</i><br>
