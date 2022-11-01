@@ -36,7 +36,6 @@ Sol er under horisonten</p>
 ligth-on: tænd lys og start eller genstart timer<br>
 ligth-off: sluk lys
 </p>
-
 <p>Visning i brugergrænseflade</p>
 
-![image](https://user-images.githubusercontent.com/103023823/198015505-5aa6042f-2111-4588-bcf5-755066c2a495.png)
+![image](https://user-images.githubusercontent.com/103023823/199212389-9ebfb6ff-a760-4bb1-8a37-95adc60ea122.png)
