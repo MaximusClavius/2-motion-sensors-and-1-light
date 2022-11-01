@@ -29,15 +29,24 @@ trigger:
     domain: binary_sensor
     id: motion-korridor-off
     enabled: false
-  - platform: state
-    entity_id:
-      - binary_sensor.motion_sensors
-    id: motion-korridor-on
-    to: "on"
   - platform: event
     event_type: timer.finished
     id: motion-korridor-off
+    enabled: false
+  - platform: state
+    entity_id:
+      - binary_sensor.motion_sensors
+    id: motion-on
+    to: "on"
+  - platform: state
+    entity_id:
+      - binary_sensor.motion_sensors
+    to: "off"
+    id: motion-off
 condition:
+  - condition: template
+    value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
+    enabled: false
   - condition: or
     conditions:
       - condition: template
@@ -48,14 +57,11 @@ condition:
           states.light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light.state ==
           'on'}}
     enabled: true
-  - condition: template
-    value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
-    enabled: false
 action:
   - choose:
       - conditions:
           - condition: trigger
-            id: motion-korridor-on
+            id: motion-on
           - condition: or
             conditions:
               - condition: trigger
@@ -73,6 +79,7 @@ action:
             data: {}
             target:
               entity_id: timer.lyseslukker
+            enabled: false
       - conditions:
           - condition: trigger
             id: motion-korridor-off
