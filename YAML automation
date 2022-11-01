@@ -7,56 +7,72 @@ trigger:
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
     domain: binary_sensor
     id: motion-korridor-on
+    enabled: false
   - type: motion
     platform: device
     device_id: 61db5bf4741cdae705f79e7d2fdb31bd
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
     domain: binary_sensor
-    id: motion-korridor-on
+    id: motion-korridor-on2
+    enabled: false
+  - type: no_motion
+    platform: device
+    device_id: 61db5bf4741cdae705f79e7d2fdb31bd
+    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
+    domain: binary_sensor
+    id: motion-korridor-off
+    enabled: false
   - type: no_motion
     platform: device
     device_id: 500b2e5415d29c9d17b4033a547d5bb4
     entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion
     domain: binary_sensor
     id: motion-korridor-off
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 0
-  - type: no_motion
-    platform: device
-    device_id: 61db5bf4741cdae705f79e7d2fdb31bd
-    entity_id: binary_sensor.ikea_of_sweden_tradfri_motion_sensor_motion_2
-    domain: binary_sensor
-    id: motion-korridor-off
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 0
-condition:
-  - condition: and
-    conditions:
-      - condition: device
-        type: is_on
-        device_id: b65e04bd25f0b811ef4b9a4b5bf3a314
-        entity_id: light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light
-        domain: light
-      - condition: template
-        value_template: "{{ states.sun.sun.state == 'above_horizon' }}"
     enabled: false
+  - platform: state
+    entity_id:
+      - binary_sensor.motion_sensors
+    id: motion-korridor-on
+    to: "on"
+  - platform: event
+    event_type: timer.finished
+    id: motion-korridor-off
+condition:
+  - condition: or
+    conditions:
+      - condition: template
+        value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
+      - condition: template
+        value_template: >-
+          {{ states.sun.sun.state == 'above_horizon' and
+          states.light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light.state ==
+          'on'}}
+    enabled: true
   - condition: template
     value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
+    enabled: false
 action:
   - choose:
       - conditions:
           - condition: trigger
             id: motion-korridor-on
+          - condition: or
+            conditions:
+              - condition: trigger
+                id: motion-korridor-on
+              - condition: trigger
+                id: motion-korridor-on2
+            enabled: false
         sequence:
           - type: turn_on
             device_id: b65e04bd25f0b811ef4b9a4b5bf3a314
             entity_id: light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light
             domain: light
             brightness_pct: 50
+          - service: timer.start
+            data: {}
+            target:
+              entity_id: timer.lyseslukker
       - conditions:
           - condition: trigger
             id: motion-korridor-off
