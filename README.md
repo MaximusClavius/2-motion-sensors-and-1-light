@@ -15,7 +15,7 @@ En af sensorerne registrer ingen bevægelse længere -> sluk lys efter 3 minutte
 
 Fejl! Hvis der er registreret bevægelse og solen er skiftet til over horisonten, så slukker lyset ikke..., da udløseren bevægelse er stoppet aldrig bliver udløst
 Så de nye betingelser er:
-1) Sol er over horisonten og lyset er tændt
+1) Sol er over horisonten og lyset er tændt <b>eller</b>
 2) Sol er under horisonten
 <p>Visning i brugergrænseflade</p>
 
