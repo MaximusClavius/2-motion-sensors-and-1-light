@@ -1,12 +1,14 @@
 # 2-motion-sensors-and-1-light
 
 ## Det er noget skrammel
+<å>Oprindelige ide: En lille YAML-script som anvender trigger ID, således at tænd og sluk funktion kan være i en automation
+Denne automation virker, når solen ikke længere er over horisonten, dvs når det er mørkt.</p>
 Udklip af historikken fra området: Gang + sun.sun
 ![Skærmbillede 2022-11-01 075949](https://user-images.githubusercontent.com/103023823/199177495-ae3647a2-2cdc-4f7e-8b98-5840aae262b7.png)
 <del>Der er 2 problemer i denne konstruktion</del> Nej, der er 3 problemer i denne konstruktion:
 1. Sensor 2 tænder og slukker lyset, og ignorer sensor 1
-2. Sensor 1 vil slukke lyset, men solen er over horisonten, og lyset bliver ikke slukket. I øvrigt vil den vente på punkt 3.
-3. En IKEA sensor sender kun en motion-off, når der er konstateret en motion-on og det sker efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)
+2. Sensor 1 vil slukke lyset, men solen er over horisonten, og lyset bliver ikke slukket.
+3. Ingen udløser til at slukke lyset i dagslys. En IKEA sensor sender kun en motion-off, når der er konstateret en motion-on og det sker efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)
 <p><b>DER ER DØMT TÆNKEBOKS</b></p>
 
 En lille YAML-script som anvender trigger ID, således at tænd og sluk funktion kan være i en automation
