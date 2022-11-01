@@ -36,6 +36,11 @@ Sol er under horisonten</p>
 ligth-on: tænd lys og start eller genstart timer<br>
 ligth-off: sluk lys
 </p>
-<p>Visning i brugergrænseflade</p>
+<p>Visning i brugergrænseflade<br>
+Hvis man fjernede det gamle bras (de deaktiverede), så blev det til en lille fin automation.<br>
+En Hjælper>Gruppe samlede bevægelsessensorene i "Udløsere", og fik dem til at samarbejde om bevægelse on/off.<br>
+En Hjælper>Timer fik lyset til at slukke hver eneste gang - dog afhængig af Betingelser.<br>
+Trigger ID bevirkede af Handlinger blev reduceret til 2, nemlig 1) tænd lys og timer og 2) sluk lys.<br>
+Alternativt kunne man droppe timeren, og bruge gruppen som trigger til både on/off for bevægelsessensorer fremfor kun on.</p>
 
 ![image](https://user-images.githubusercontent.com/103023823/199212389-9ebfb6ff-a760-4bb1-8a37-95adc60ea122.png)
