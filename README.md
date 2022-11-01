@@ -8,7 +8,7 @@ En af sensorerne registrer en bevægelse -> tænd lys<br>
 En af sensorerne registrer ingen bevægelse længere -> sluk lys efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)</p>
 <p><b>Betingelser:</b><br>
 Sol er over horisonten og lyset er tændt<br>
-<i>eller</i><br>
+&emsp;<i>eller</i><br>
 Sol er under horisonten</p>
 <p><b>Handlinger:</b><br>
 <i>Choose:</i><br>
@@ -29,7 +29,7 @@ En af sensorerne registrer en bevægelse -> tænd lys<br>
 Timer udløber -> sluk lys<br>
 <p><b>Betingelser:</b><br>
 Sol er over horisonten og lyset er tændt<br>
-<i>eller</i><br>
+&emsp;<i>eller</i><br>
 Sol er under horisonten</p>
 <p><b>Handlinger:</b><br>
 <i>Choose:</i><br>
