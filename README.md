@@ -40,6 +40,6 @@ Hvis man fjernede det gamle bras (de deaktiverede), så blev det til en lille fi
 En Hjælper>Gruppe samlede bevægelsessensorene i "Udløsere", og fik dem til at samarbejde om bevægelse on/off.<br>
 En Hjælper>Timer fik lyset til at slukke hver eneste gang - dog afhængig af Betingelser.<br>
 Trigger ID bevirkede af Handlinger blev reduceret til 2, nemlig 1) tænd lys og start timer og 2) sluk lys.<br>
-Alternativt kunne man droppe timeren, og bruge gruppen som trigger til både "on"/"off" for bevægelsessensorer fremfor kun "on", men da jeg har sat flueben i "restore" på timer, så vil min automation fortsætter selvom HA bliver genstartet.</p>
+Alternativt kunne man droppe timeren, og bruge gruppen som trigger til både "on"/"off" for bevægelsessensorer fremfor kun "on", men da jeg har sat flueben i "restore" på timer, så vil min automation fortsætte selvom HA bliver genstartet.</p>
 
 ![image](https://user-images.githubusercontent.com/103023823/199212389-9ebfb6ff-a760-4bb1-8a37-95adc60ea122.png)
