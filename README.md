@@ -1,7 +1,5 @@
 # 2-motion-sensors-and-1-light
-
-## Det er noget skrammel
-<p>Oprindelige ide: En lille YAML-script som anvender trigger ID, således at tænd og sluk funktion kan være i en automation. Denne automation skal virke, når solen ikke længere er over horisonten, dvs når det er mørkt.</p>
+<p>Oprindelige ide: Et lille YAML-script som anvender trigger ID, således at tænd og sluk funktion kan være i en automation. Denne automation skal virke, når solen ikke længere er over horisonten, dvs når det er mørkt.</p>
 <p><b>Udløsere:</b><br>
 En af sensorerne registrer en bevægelse -> tænd lys (trigger ID: ligth-on)<br>
 En af sensorerne registrer ingen bevægelse længere -> sluk lys efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren) (trigger ID: ligth-off)</p>
@@ -22,7 +20,7 @@ Udklip af historikken fra området: Gang + sun.sun
 2. Sensor 1 vil slukke lyset, men solen er over horisonten, og lyset bliver ikke slukket.
 3. Ingen udløser til at slukke lyset i dagslys. En IKEA sensor sender kun en motion-off, når der er konstateret en motion-on og det sker efter 3 minutter (default IKEA værdi, som er hardcoded i sensoren)
 <p><b>DER ER DØMT TÆNKEBOKS</b></p>
-Når jeg ved der er 3 minutter colddown før en motion-off, så kunne man ersatte motion-off med en timer, som slukker lyset efter 3-4 minutter. Får at sensorerne til at samarbejde skal de i samme gruppe.
+Når jeg ved der er 3 minutter cooldown før en motion-off, så kunne man ersatte motion-off med en timer, som slukker lyset efter 3-4 minutter. Får at sensorerne til at samarbejde skal de i samme gruppe.
 <p><b>Udløsere:</b><br>
 En af sensorerne registrer en bevægelse -> tænd lys (trigger ID: ligth-on)<br>
 Timer udløber -> sluk lys (trigger ID: ligth-off)<br>
@@ -37,7 +35,7 @@ ligth-off: sluk lys
 </p>
 <p>Visning i brugergrænseflade<br>
 Hvis man fjernede det gamle bras (de deaktiverede), så blev det til en lille fin automation.<br>
-En Hjælper>Gruppe samlede bevægelsessensorene i "Udløsere", og fik dem til at samarbejde om bevægelse on/off.<br>
+En Hjælper>Gruppe samlede bevægelsessensorene i "Udløsere", og fik dem til at samarbejde om bevægelse "on"/"off".<br>
 En Hjælper>Timer fik lyset til at slukke hver eneste gang - dog afhængig af Betingelser.<br>
 Trigger ID bevirkede af Handlinger blev reduceret til 2, nemlig 1) tænd lys og start timer og 2) sluk lys.<br>
 Alternativt kunne man droppe timeren, og bruge gruppen som trigger til både "on"/"off" for bevægelsessensorer fremfor kun "on", men da jeg har sat flueben i "restore" på timer, så vil min automation fortsætte selvom HA bliver genstartet.</p>
