@@ -15,7 +15,7 @@ Hvis solen står op, mens der er lys vil lyset aldrig slukke. Så derfor den "ek
 
 1) When triggered by motion-on (tænd lys)
 2) When triggered by motion-off (sluk lys)
-Så er lyset tændt afhængig af bevægelsessensorernes "kørende" cooldown.</p>
+<p>Så er lyset tændt afhængig af bevægelsessensorernes "kørende" cooldown.</p>
 ## Det er noget skrammel
 <p>IKEA motion sensorer fornyer ikke deres event: motion-on. Det betyder timeren ikke bliver fornyet og dermed ikke forlænget, som ellers er en egenskab ved timer. Så timer bliver ikke genstartet som forventet... - så må løsningen være Hjælper->Gruppe skal stå for motion "on"/"off"</p>
 
