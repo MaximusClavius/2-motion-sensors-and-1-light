@@ -4,15 +4,18 @@
 
 1) When Motion sensors changes to on
 2) When Motion sensors changes to off
+<p>Derefter 2 betingelse:</p>
+
+1) Hvis solen er under horisonten <b>eller</b>
+2) Hvis solen er over horisonten <b>og</b> lyset er tændt
+<p>PS<br>
+Hvis solen står op, mens der er lys vil lyset aldrig slukke. Så derfor den "ekstra" betingelse.</p>
 
 <p>Derefter 2 handlinger:</p>
 
 1) When triggered by motion-on (tænd lys)
 2) When triggered by motion-off (sluk lys)
-
 Så er lyset tændt afhængig af bevægelsessensorernes "kørende" cooldown.</p>
-PS<br>
-Hvis solen står op, mens der er lys vil lyset aldrig slukke. Så derfor den "ekstra" betingelse.
 ## Det er noget skrammel
 <p>IKEA motion sensorer fornyer ikke deres event: motion-on. Det betyder timeren ikke bliver fornyet og dermed ikke forlænget, som ellers er en egenskab ved timer. Så timer bliver ikke genstartet som forventet... - så må løsningen være Hjælper->Gruppe skal stå for motion "on"/"off"</p>
 
