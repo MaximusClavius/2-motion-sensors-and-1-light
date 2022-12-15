@@ -19,8 +19,9 @@ condition:
         state: below_horizon
       - condition: template
         value_template: >-
-          {{ is_state('sun.sun', 'above_horizon') and is_state('light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light', 'on') }}
-    enabled: true
+          {{ is_state('sun.sun', 'above_horizon') and
+          is_state('light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light', 'on')
+          }}
 action:
   - choose:
       - conditions:
