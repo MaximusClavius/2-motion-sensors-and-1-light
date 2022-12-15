@@ -14,13 +14,12 @@ trigger:
 condition:
   - condition: or
     conditions:
-      - condition: template
-        value_template: "{{ states.sun.sun.state == 'below_horizon' }}"
+      - condition: state
+        entity_id: sun.sun
+        state: below_horizon
       - condition: template
         value_template: >-
-          {{ states.sun.sun.state == 'above_horizon' and
-          states.light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light.state ==
-          'on'}}
+          {{ is_state('sun.sun', 'above_horizon') and is_state('light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light', 'on') }}
     enabled: true
 action:
   - choose:
