@@ -64,3 +64,5 @@ Trigger ID bevirkede af Handlinger blev reduceret til 2, nemlig 1) tænd lys og 
 Alternativt kunne man droppe timeren, og bruge gruppen som trigger til både "on"/"off" for bevægelsessensorer fremfor kun "on", men da jeg har sat flueben i "restore" på timer, så vil min automation fortsætte selvom HA bliver genstartet.</p>
 
 ![image](https://user-images.githubusercontent.com/103023823/199332618-ba1853fd-02f0-4b9e-8c31-fff08dfa1548.png)
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=NNUF56TVFMJXY"><img src="https://www.paypalobjects.com/da_DK/DK/i/btn/btn_donateCC_LG.gif" alt="Doner en skræv"></a>
